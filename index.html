@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de passageiros</title>
+    <link rel="stylesheet" tyoe="text/css" href="main.css">
+</head>
+
+<body>
+    <h1>Contagem de passageiros</h1>
+<form>
+        <label>Hora de inicio do pico da linha?</label>
+        <input type="time" id="horaInicioPico" required/>
+        <br/>
+        <br/>
+        <label>Hora final do pico da linha?</label>
+        <input type="time" id="horaFinalPico" required/>
+        <br/>
+        <br/>
+        <label>Iniciando câmeras e sensores.</p>
+        <label>Inicie a viagem</p>
+        <label>Qual a hora atual?</label>
+        <input type="time" id="horaAtual" required/>
+        <br/>
+        <br/>
+        <label for="sensorEntrada">Alguém Entrou?</label>
+        <select id="sensorEntrada">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        </select><br/><br/>
+        <label for="sensorSaida">Alguém Saiu?</label>
+        <select id="sensorSaida">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        </select><br/><br/>
+        <label for="viagemEmAndamento">Viagem em Andamento?</label>
+        <select id="viagemEmAndamento">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        </select><br/><br/>
+        <input type="button" value="Registrar Entrada" onclick="registrarEntrada()"/>
+        <br>
+        <input type="button" value="Registrar Saída" onclick="registrarSaida()"/>
+        </form>
+        <br/>
+        <br/>
+        <h2>Relatório</h2>
+        <p>Número de passageiros no horário de pico entrando: <span id="contagem">0</span></p>
+        <br>
+        <p>Número Máximo de Passageiros no Ônibus: <span id="total">0</span></p>
+        <br>
+        <p>Número de Passageiros que entrou: <span id="contagemTotal">0</span></p>
+        <footer>Desenvolvido por: Gabriel Eduardo Odorizzi 
+        </footer>
+        <script src="script.js"></script>
+</body>
+
+</html>
